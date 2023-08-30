@@ -1,0 +1,109 @@
+"use client";
+
+import AuthHeader from "@/components/headers/AuthHeader";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "@/firebase";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
+
+// Type for form
+type FormValue = {
+  email: string;
+};
+
+// Schema for form validation
+const schema = yup.object({
+  email: yup
+    .string()
+    .email("wrong email format")
+    .required("email is required for reset link"),
+});
+
+export default function ForgotPassword() {
+  // react hook form
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({
+    defaultValues: {
+      email: "",
+    },
+    mode: "all",
+    resolver: yupResolver(schema),
+  });
+
+  // send the firebase reset links
+  const onSubmit = async (formValue: FormValue) => {
+    await sendPasswordResetEmail(auth, formValue.email);
+    toast("Email sent", {
+      position: "bottom-right",
+      type: "success",
+      bodyClassName: "toast",
+    });
+  };
+
+  return (
+    // page wrapper
+    <div>
+      {/* form wrapper */}
+      <AuthHeader />
+      <section>
+        <div className="p-3 md:w-[35%] mx-auto">
+          <div className="space-y-2 my-4">
+            <h4 className="font-header text-3xl font-semibold">
+              Forgot your password
+            </h4>
+            <p className="text-neutral-400 font-body underline">
+              Enter the email address associated with your account, and we will
+              email you a link to reset your password
+            </p>
+          </div>
+          <form className="my-4" onSubmit={handleSubmit(onSubmit)}>
+            <div className="flex flex-col font-body my-4 gap-1">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                className={
+                  errors.email?.message
+                    ? "p-3 rounded-lg outline-none border border-red-500"
+                    : "p-3 rounded-lg outline-none border border-main"
+                }
+                {...register("email")}
+              />
+              <p className="font-body text-red-500 text-sm capitalize">
+                {errors.email?.message}
+              </p>
+            </div>
+            <button
+              disabled={!isValid}
+              className={
+                !isValid
+                  ? "bg-main/50 p-4 rounded-lg text-neutral-100 w-full font-header"
+                  : "bg-main p-4 rounded-lg text-white w-full font-header"
+              }
+            >
+              Send Reset link
+            </button>
+          </form>
+          <div className="flex items-center justify-center my-3 gap-1 font-body text-neutral-400 text-center">
+            <p>Remembered your password</p>{" "}
+            <Link href="/login" className="text-main underline">
+              Login
+            </Link>
+          </div>
+        </div>
+        <ToastContainer bodyClassName="toast" theme="colored" />
+        <DevTool control={control} />
+      </section>
+      {/* end of form */}
+    </div>
+  );
+}
