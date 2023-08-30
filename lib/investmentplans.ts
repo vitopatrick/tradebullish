@@ -3,23 +3,30 @@ import { formatCurrency } from "@/utils/formatCurrency";
 export default [
   {
     id: 1,
-    name: "Sliver",
+    name: "Bronze",
     minAmount: formatCurrency(5000),
-    duration: "1 week",
-    return: "20%",
+    duration: "25-30days",
+    return: "15%",
   },
   {
     id: 2,
-    name: "Gold",
-    minAmount: formatCurrency(20000),
-    duration: "1 week",
-    return: "30%",
+    name: "Sliver",
+    minAmount: formatCurrency(5000),
+    duration: "25-30days",
+    return: "20%",
   },
   {
     id: 3,
+    name: "Gold",
+    minAmount: formatCurrency(20000),
+    duration: "25-30days",
+    return: "30%",
+  },
+  {
+    id: 4,
     name: "Platinum",
     minAmount: formatCurrency(50000),
-    duration: "1 week",
+    duration: "25-30days",
     return: "42%",
   },
 ];

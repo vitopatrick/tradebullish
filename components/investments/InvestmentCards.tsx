@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function InvestmentCards() {
   return (
     // parent div container
-    <section className="md:grid grid-cols-3 gap-3 p-4">
+    <section className="md:grid grid-cols-4 gap-3 p-4">
       {investmentplans.map((plan) => (
         <div
           key={plan.id}
