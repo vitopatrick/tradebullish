@@ -1,18 +1,16 @@
+"use client";
 import Footer from "@/components/footer/Footer";
 import "./globals.css";
-import type { Metadata } from "next";
 import Nav from "@/components/nav/Nav";
-
-export const metadata: Metadata = {
-  title: "Nagamarket",
-  description: "Start your easy trading Today",
-};
+import { useChatSupport } from "@/hooks/useChatSupport";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  useChatSupport();
+
   return (
     <html lang="en">
       <body>
