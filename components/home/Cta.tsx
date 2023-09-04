@@ -14,7 +14,6 @@ export default function Cta() {
           </h4>
           <p className="font-body text-neutral-200">Trading Crypto CFDs</p>
         </div>
-
         <div className="text-center">
           <h4 className="text-2xl md:text-4xl font-header font-semibold my-2 text-white">
             100k +
