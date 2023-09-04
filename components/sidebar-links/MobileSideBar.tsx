@@ -12,11 +12,11 @@ export default function MobileSideBar({ isOpen, toggle }: LoadingModal) {
     <div
       className={
         isOpen
-          ? "fixed top-0 z-40 bottom-0 right-0 left-0 bg-white/20 backdrop-blur-md"
+          ? "fixed top-0 z-40 bottom-0 right-0 left-0 bg-white/20 backdrop-blur-md h-screen"
           : "hidden"
       }
     >
-      <div className="my-4 p-4">
+      <div className="my-2 p-4">
         <button
           className="flex items-center gap-2 justify-center"
           onClick={() => toggle(false)}

@@ -69,7 +69,7 @@ export default function SideBarLinks() {
         </div>
         {/* end of transactions links */}
         {/* logout button */}
-        <div className="p-2 mt-[10rem]">
+        <div className="p-2 md:mt-[10rem]">
           <button
             onClick={logOut}
             className="flex items-center gap-1 font-body w-full hover:bg-bg px-2 py-4 rounded-lg"
