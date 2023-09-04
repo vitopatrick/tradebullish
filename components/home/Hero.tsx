@@ -40,7 +40,7 @@ export default function Hero() {
           <img
             src="https://naga.com/_next/image?url=%2Fimages%2Fwhy-choose-naga%2Finvest%2Fimg-3.png&w=1440&q=75"
             alt="trader image"
-            className="w-2/4 mx-auto"
+            className="md:w-2/4 w-3/4 mx-auto"
           />
         </div>
         {/* end of Child Two */}

@@ -9,7 +9,7 @@ import "react-toastify/ReactToastify.min.css";
 export default function DepositPage() {
   return (
     <section>
-      <section className="flex p-4">
+      <section className="flex p-4 md:flex-row flex-col">
         <DepositForm />
         <DepositFaq />
       </section>

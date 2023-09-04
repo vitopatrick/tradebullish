@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useState,
+  useRef,
+  MutableRefObject,
+} from "react";
 import * as Md from "react-icons/md";
 import * as Fa from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
@@ -10,10 +16,11 @@ import * as yup from "yup";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { collection, serverTimestamp, addDoc } from "firebase/firestore";
-import { store } from "@/firebase";
+import { bucket, store } from "@/firebase";
 import walletAddress from "@/lib/wallet-address";
 import { UserContext } from "@/context/UserAuthContext";
 import LoadingModal from "../modals/LoadingModal";
+import { ref, uploadBytes } from "firebase/storage";
 
 type FormValues = {
   coin: string;
@@ -208,6 +215,7 @@ const Form = () => {
           {/* end of wallet details */}
         </form>
       </section>
+      <UploadProof />
       <BarCodeModal show={showBarCode} close={setBarCode} coin={defaultCoin} />
       <LoadingModal isOpen={isSubmitting} />
     </>
@@ -250,6 +258,65 @@ const BarCodeModal = ({ coin, show, close }: any) => {
         </div>
       </motion.section>
     </AnimatePresence>
+  );
+};
+
+const UploadProof = () => {
+  // the form ref
+  const fileRef: MutableRefObject<undefined | any> = useRef();
+
+  const router = useRouter();
+
+  // upload to firebase
+  const onSubmit = async (event: any) => {
+    // prevent default form behavior
+    event.preventDefault();
+    try {
+      // upload Image
+      const imgRef = ref(
+        bucket,
+        `deposit-proof/${fileRef.current.files[0].name}`
+      );
+      await uploadBytes(imgRef, fileRef.current.files[0]);
+      toast("upload successful", {
+        type: "success",
+        position: "bottom-center",
+        bodyClassName: "toast",
+      });
+
+      router.refresh();
+    } catch (error: any) {
+      toast(error.code, {
+        type: "error",
+        position: "bottom-center",
+        bodyClassName: "toast",
+      });
+    }
+  };
+
+  return (
+    <form className="mt-6" onSubmit={onSubmit}>
+      <div>
+        <h4 className="font-body underline text-lg text-neutral-300">
+          Please Upload Payment Proof.
+        </h4>
+        <div className="my-8">
+          <input
+            type="file"
+            name="proof_img"
+            id="proof_img"
+            ref={fileRef}
+            className="text-neutral-300 font-body"
+          />
+        </div>
+        <button
+          type="submit"
+          className="bg-main  text-white  font-body font-semibold shadow rounded px-4 py-2"
+        >
+          Submit file
+        </button>
+      </div>
+    </form>
   );
 };
 

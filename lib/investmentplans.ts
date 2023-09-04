@@ -4,7 +4,7 @@ export default [
   {
     id: 1,
     name: "Bronze",
-    minAmount: formatCurrency(5000),
+    minAmount: formatCurrency(500),
     duration: "25-30days",
     return: "15%",
   },
