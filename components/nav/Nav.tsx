@@ -9,20 +9,20 @@ export default function Nav() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="font-header text-main tracking-widest underline uppercase text-2xl font-bold"
+            className="font-header text-main tracking-widest underline uppercase text-xl md:text-2xl font-bold"
           >
             Nagamarkets
           </Link>
-          <div className="font-body space-x-4">
+          <div className="font-body flex gap-3">
             <Link
               href="/login"
-              className="border border-main p-4 rounded-lg text-main"
+              className="border border-main px-6 py-4 rounded-lg text-main"
             >
               Login
             </Link>
             <Link
               href="/get-started"
-              className="bg-main hidden md:block text-white p-4 rounded-lg"
+              className="bg-main hidden md:block text-white px-6 py-4 rounded-lg"
             >
               Get started
             </Link>
