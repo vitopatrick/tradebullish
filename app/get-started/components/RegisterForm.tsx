@@ -85,6 +85,7 @@ const RegisterForm = () => {
         verified: false,
         createAt: user.metadata.creationTime,
         name: values.full_name,
+        wallet: 1,
       });
 
       // redirect users to the there dashboard
