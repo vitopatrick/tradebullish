@@ -22,7 +22,7 @@ export default function Nav() {
             </Link>
             <Link
               href="/get-started"
-              className="bg-main text-white p-4 rounded-lg"
+              className="bg-main hidden md:block text-white p-4 rounded-lg"
             >
               Get started
             </Link>
