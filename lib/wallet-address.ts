@@ -53,9 +53,9 @@ export const walletTwo = [
   },
   {
     id: 5,
-    address: "ltc1q4cdzjws5p7u6zp4gygmww5v9vh9d5f45ws9xzz",
+    address: "LbsWfMHTLNp3M5ELUxfanYMQZpTuX8DPFs",
     sym: "LTC",
     name: "Litecoin",
-    img: "/wallets/ltc.jpeg",
+    img: "/wallets/ltc2.jpeg",
   },
 ];
