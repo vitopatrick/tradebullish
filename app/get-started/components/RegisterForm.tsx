@@ -68,6 +68,12 @@ const RegisterForm = () => {
         values.password
       );
 
+      // call the API
+      await fetch("/api", {
+        method: "POST",
+        body: JSON.stringify({ email: values.email }),
+      });
+
       // add the refresh token to localStorage
       localStorage.setItem("token", user.refreshToken);
 
