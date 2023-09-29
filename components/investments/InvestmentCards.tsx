@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function InvestmentCards() {
   return (
     // parent div container
-    <section className="md:grid md:grid-cols-4 grid-cols-1 gap-6 md:gap-3 p-4">
+    <section className="flex gap-4 flex-col md:flex-row p-6">
       {investmentplans.map((plan) => (
         <div
           key={plan.id}
-          className="bg-sideBar space-y-4 rounded-lg p-3 hover:shadow-main transition-all hover:shadow-sm ease-in-out hover:border hover:border-main hover:scale-105"
+          className="bg-sideBar flex-1 basis-auto space-y-4 rounded-lg p-3 hover:shadow-main transition-all hover:shadow-sm ease-in-out hover:border hover:border-main hover:scale-105"
         >
           <h4 className="text-neutral-400 md:text-2xl text-2xl font-header font-semibold">
             {plan.name}
