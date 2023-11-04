@@ -25,7 +25,10 @@ export default function SideBarLinks() {
           href="/dashboard"
           className="text-2xl underline text-main font-header tracking-widest"
         >
-          Nagamarket
+          <img
+            src="https://irp.cdn-website.com/eacf0b23/dms3rep/multi/BrokerBase+Logo-01.svg"
+            alt=""
+          />
         </Link>
       </div>
       {/* links wrapper container*/}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get started with Nagamarkets",
+  title: "Get started with Brokerbase FX Trader",
   description: "Start your easy trading Today",
 };
 
@@ -12,7 +12,7 @@ export default function RegisterLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="h-screen w-screen">{children}</body>
     </html>
   );
 }

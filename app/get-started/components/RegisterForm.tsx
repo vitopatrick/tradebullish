@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -34,8 +33,6 @@ const schema = yup.object({
 });
 
 const RegisterForm = () => {
-  // state for password
-  const [isText, setIsText] = useState(false);
   const {
     register,
     control,
@@ -121,168 +118,106 @@ const RegisterForm = () => {
   };
 
   return (
-    <section>
-      {/* header to point to login */}
-      <div className="flex mb-[10%] items-end justify-end">
-        <Link
-          href="/login"
-          className=" bg-main px-8 py-2 font-body text-white rounded-lg"
-        >
-          Sign In
-        </Link>
-      </div>
-      {/* form wrapper div */}
-      <div className="py-4 my-2">
-        <div className="space-y-3 text-center">
-          <h4 className=" text-2xl md:text-4xl font-light text-neutral-500 font-header">
-            Sign Up,
-            <span className="font-semibold text-main underline">It's Free</span>
-          </h4>
-          <p className="font-body underline">
-            Trade the global markets with nagamarkets
+    <section className="w-full mt-[3rem] md:mt-0">
+      <form className="space-y-8" onSubmit={handleSubmit(registerUser)}>
+        {/* Name */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="name" className="font-bodyTwo">
+            Name
+          </label>
+          <input
+            type="text"
+            {...register("full_name")}
+            placeholder="John Doe"
+            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+          />
+          <p className="font-bodyTwo text-sm capitalize text-red-400">
+            {errors.full_name?.message}
           </p>
         </div>
-        <form
-          className="mt-6 md:w-[70%] w-[80%] mx-auto space-y-6"
-          onSubmit={handleSubmit(registerUser)}
-        >
-          {/* Name Field */}
-          <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="font-body text-neutral-500">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              {...register("full_name")}
-              className={
-                errors.full_name?.message
-                  ? "p-3 rounded-lg border border-red-500 outline-none font-body"
-                  : "p-3 rounded-lg border border-blue-400 outline-none font-body"
-              }
-            />
-            <p className="font-body text-red-500 capitalize">
-              {errors.full_name?.message}
-            </p>
-          </div>
-          {/* end of name field */}
-          {/* email field */}
-          <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="font-body text-neutral-500">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              {...register("email")}
-              className={
-                errors.email?.message
-                  ? "p-3 rounded-lg border border-red-500 outline-none font-body"
-                  : "p-3 rounded-lg border border-blue-400 outline-none font-body"
-              }
-            />
-            <p className="font-body text-red-500 capitalize">
-              {errors.email?.message}
-            </p>
-          </div>
-          {/* end of email field */}
-          {/* password field  */}
-          <div className="">
-            <label htmlFor="password" className="font-body text-neutral-500">
-              Password
-            </label>
-            <div
-              className={
-                errors.password?.message
-                  ? "flex items-center border border-red-500 p-1 rounded-lg"
-                  : "flex items-center border border-main p-1 rounded-lg"
-              }
-            >
-              <input
-                type={isText ? "text" : "password"}
-                id="password"
-                {...register("password")}
-                className="w-full p-2  outline-none font-body"
-              />
-              {isText ? (
-                <FaEye
-                  className="cursor-pointer"
-                  onClick={() => setIsText(false)}
-                />
-              ) : (
-                <FaEyeSlash
-                  className="cursor-pointer"
-                  onClick={() => setIsText(true)}
-                />
-              )}
-            </div>
-            <p className="font-body text-red-500 capitalize">
-              {errors.password?.message}
-            </p>
-          </div>
-          {/* end of password field */}
-          {/* phone number field */}
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="phone number"
-              className="font-body text-neutral-500"
-            >
-              Phone Number
-            </label>
-            <input
-              type="text"
-              id="phone_number"
-              {...register("phone_number")}
-              className={
-                errors.phone_number?.message
-                  ? "p-3 rounded-lg border border-red-500 outline-none font-body"
-                  : "p-3 rounded-lg border border-blue-400 outline-none font-body"
-              }
-            />
-            <p className="font-body text-red-500 capitalize">
-              {errors.phone_number?.message}
-            </p>
-          </div>
-          {/* end of phone number field */}
-          {/**
-           * select field for country
-           *  */}
-          <div className="flex flex-col gap-1">
-            <label htmlFor="country" className="font-body text-neutral-500">
-              Country
-            </label>
-            <select
-              id="country"
-              {...register("country")}
-              className="font-body border border-main p-4 outline-none rounded-lg text-neutral-500"
-            >
-              {countries &&
-                countries.map((country: any, index: number) => (
-                  <option key={index}>{country?.country}</option>
-                ))}
-            </select>
-            <p className="font-body text-red-500 capitalize">
-              {errors.country?.message}
-            </p>
-          </div>
-          <button
-            disabled={!isValid}
-            className={
-              !isValid
-                ? "w-full bg-main/50 rounded-lg p-4 my-5 text-neutral-100 font-header"
-                : "w-full bg-main rounded-lg p-4 my-5 text-white font-header"
-            }
-          >
-            Create Account Today
-          </button>
-          <p className="text-center font-body underline text-neutral-400">
-            By registering an account you hereby agree with the entire content
-            of all legal documents.
+        {/* email */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="email" className="font-bodyTwo">
+            Email
+          </label>
+          <input
+            type="email"
+            {...register("email")}
+            placeholder="JohnDoe@example.com"
+            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+          />
+          <p className="font-bodyTwo text-sm capitalize text-red-400">
+            {errors.email?.message}
           </p>
-        </form>
-      </div>
-      {/* end of form wrapper div */}
-      {/* react hook form dev tools */}
+        </div>
+        {/* password */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="password" className="font-bodyTwo">
+            Password
+          </label>
+          <input
+            type="password"
+            {...register("password")}
+            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+          />
+          <p className="font-bodyTwo text-sm capitalize text-red-400">
+            {errors.password?.message}
+          </p>
+        </div>
+        {/* phone Number */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="phone Number" className="font-bodyTwo">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            {...register("phone_number")}
+            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+          />
+          <p className="font-bodyTwo text-sm capitalize text-red-400">
+            {errors.phone_number?.message}
+          </p>
+        </div>
+        {/* country */}
+        <div className="flex flex-col gap-1">
+          <label htmlFor="country" className="font-bodyTwo">
+            Country
+          </label>
+          <select
+            {...register("country")}
+            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+          >
+            {countries &&
+              countries.map((country: any) => (
+                <option value={country.country}>{country.country}</option>
+              ))}
+          </select>
+          <p className="font-bodyTwo text-sm capitalize text-red-400">
+            {errors.country?.message}
+          </p>
+        </div>
+        {/* button */}
+        <button
+          type="submit"
+          disabled={!isValid}
+          className={
+            !isValid
+              ? "font-headerTwo font-semibold bg-neutral-500 w-full p-4 text-neutral-300 rounded-md"
+              : "font-headerTwo font-semibold bg-black w-full p-4 text-white rounded-md"
+          }
+        >
+          Register Today
+        </button>
+        {/* Route the user to the login page */}
+        <div>
+          <p className="font-bodyTwo text-neutral-400">
+            Already Have an account{" "}
+            <Link href="/login" className="text-neutral-600 underline">
+              Login Account
+            </Link>
+          </p>
+        </div>
+      </form>
       <DevTool control={control} />
       {/* loading modal */}
       <LoadingModal isOpen={isSubmitting} />

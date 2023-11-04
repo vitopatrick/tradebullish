@@ -12,7 +12,7 @@ export default function LoginLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="w-screen h-screen">{children}</body>
     </html>
   );
 }

@@ -11,6 +11,8 @@ const config: Config = {
       fontFamily: {
         header: ["Montserrat Alternates", "sans-serif"],
         body: ["Josefin Sans", "sans-serif"],
+        headerTwo: ["Syne", "sans-serif"],
+        bodyTwo: ["Poppins", "sans-serif"],
       },
       colors: {
         main: "#3179ff",

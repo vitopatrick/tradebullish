@@ -1,52 +1,46 @@
 import Link from "next/link";
+import React from "react";
 
-export default function Hero() {
+type Props = {};
+
+const Hero = (props: Props) => {
   return (
-    //  flex container
-    <section className="p-5">
-      <div className="flex flex-col items-center justify-center gap-4 my-10">
-        {/* child One @return text */}
-        <div className="text-center space-y-6">
-          <h4 className="font-header text-4xl capitalize py-2 font-bold">
-            Everything a trader needs in one platform
+    <div
+      style={{
+        background:
+          "url('https://lirp.cdn-website.com/eacf0b23/dms3rep/multi/opt/BG1-1920w.jpg')",
+      }}
+      className="md:h-[500px] h-[600px] relative "
+    >
+      {/* overlay */}
+      <div className="absolute top-0 w-full py-[4rem]  h-full bg-gradient-to-br from-black to-black/30 right-0 left-0">
+        {/* container */}
+        <section className="w-[90%] mx-auto p-4 space-y-6">
+          <h4 className="md:text-5xl text-4xl text-white  font-headerTwo font-semibold md:w-[40%] w-full">
+            The Ultimate <br /> One-Stop-Shop for Trading
           </h4>
-          <p className="font-body text-neutral-500 text-xl">
-            At NAGAMARKET, we believe that everyone should have{" "}
-            <span className="font-bold text-black underline capitalize">
-              {" "}
-              easy, fast and free access
-            </span>{" "}
-            to the global financial markets.
+          <p className="font-bodyTwo md:w-[50%] leading-normal font-light text-white">
+            Discover a world of convenience with our comprehensive suite of
+            services, tailored to meet the needs of Crypto/Forex brokers.
           </p>
-          <p className="font-body text-neutral-500 text-xl">
-            That’s why we’ve built{" "}
-            <span className="font-bold underline capitalize text-black">
-              {" "}
-              the most powerful app for finance.
-            </span>
-          </p>
-          <div>
+          <div className="flex gap-4">
             <Link
-              href="/get-started"
-              className="bg-main px-6 py-4 rounded-lg font-body text-white font-bold"
+              href="/login"
+              className="font-headerTwo   px-6 py-3   rounded w-fit font-semibold bg-white"
             >
-              Create An Account - it's free
+              Login
+            </Link>
+            <Link
+              href="/sign-up"
+              className="font-headerTwo  px-6 py-3  border border-white  rounded w-fit font-semibold text-white"
+            >
+              Sign Up
             </Link>
           </div>
-        </div>
-        {/* end of Child One */}
-        {/* Child Two @return Img */}
-        <div className="my-8">
-          <img
-            src="https://naga.com/_next/image?url=%2Fimages%2Fwhy-choose-naga%2Finvest%2Fimg-3.png&w=1440&q=75"
-            alt="trader image"
-            className="md:w-2/4 w-3/4 mx-auto"
-          />
-        </div>
-        {/* end of Child Two */}
+        </section>
       </div>
-    </section>
-
-    // end of flex container
+    </div>
   );
-}
+};
+
+export default Hero;
