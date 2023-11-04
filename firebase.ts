@@ -2,15 +2,17 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB45wwC2IdEDYm5_KOed2GYD6RKROCFJUM",
-  authDomain: "nagamarkets-cefdf.firebaseapp.com",
-  projectId: "nagamarkets-cefdf",
-  storageBucket: "nagamarkets-cefdf.appspot.com",
-  messagingSenderId: "55785538154",
-  appId: "1:55785538154:web:cb0a430b3b391a03a40013",
+  apiKey: "AIzaSyDa6MEAelYuYqwgqjjmbbVj7Wzz709ThQA",
+  authDomain: "brokerbase-c03dd.firebaseapp.com",
+  projectId: "brokerbase-c03dd",
+  storageBucket: "brokerbase-c03dd.appspot.com",
+  messagingSenderId: "494274016587",
+  appId: "1:494274016587:web:dd21ceae3288ead55724ce",
 };
+
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
