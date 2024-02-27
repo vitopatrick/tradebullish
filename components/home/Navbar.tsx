@@ -33,11 +33,7 @@ const Navbar = (props: Props) => {
       <div className="flex md:w-[80%] mx-auto py-4 px-2 justify-between items-center">
         <div className="w-[200px]">
           <Link href="/">
-            <img
-              src="https://irp.cdn-website.com/eacf0b23/dms3rep/multi/BrokerBase+Logo-01.svg"
-              alt="logo"
-              className="w-full"
-            />
+            <h4 className="font-headerTwo font-bold text-2xl">Equity Plus</h4>
           </Link>
         </div>
 

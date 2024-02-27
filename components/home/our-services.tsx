@@ -7,7 +7,7 @@ let services = [
     id: 1,
     title: "CRM System",
     description:
-      "Streamline your client management with our intuitive and powerful CRM system designed for Forex brokers.",
+      "Streamline your client management with our intuitive and powerful CRM system designed for Cryptocurrency brokers.",
     image:
       "https://lirp.cdn-website.com/eacf0b23/dms3rep/multi/opt/0_1+%281%29-1280w.png",
   },
@@ -39,7 +39,7 @@ let services = [
     id: 5,
     title: "Leads",
     description:
-      "Grow your business with our high-quality, industry-specific leads tailored to Forex brokers.",
+      "Grow your business with our high-quality, industry-specific leads tailored to Cryptocurrency brokers.",
     image:
       "https://lirp.cdn-website.com/eacf0b23/dms3rep/multi/opt/0_1+%283%29-1920w.png",
   },
@@ -51,7 +51,7 @@ const OurServices = (props: Props) => {
       {/* container */}
       <section className="w-[80%] p-4 mx-auto">
         <h4 className="w-full md:w-[60%] py-3 font-headerTwo text-3xl font-semibold md:text-4xl">
-          Our Services: Empowering Forex Brokers
+          Our Services: Empowering Cryptocurrency Brokers
         </h4>
         <p className="font-headerTwo font-semibold">
           Access everything you need for success, all in one place.
@@ -67,7 +67,7 @@ const OurServices = (props: Props) => {
                 <h4 className="font-headerTwo text-2xl my-2 font-semibold">
                   {service.title}
                 </h4>
-                <p className="text-sm font-bodyTwo">{service.description}</p>
+                <p className="text-sm font-body">{service.description}</p>
               </div>
             </div>
           ))}

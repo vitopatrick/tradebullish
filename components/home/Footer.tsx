@@ -10,7 +10,7 @@ const Footer = (props: Props) => {
         <div className=" p-4 md:grid grid-cols-2">
           {/* FLEX / GRID */}
           <div className="space-y-4">
-            <h4 className="font-bodyTwo font-light text-neutral-300">Office</h4>
+            <h4 className="font-body font-light text-neutral-300">Office</h4>
             <div>
               <p className="font-headerTwo font-bold text-xl my-2">
                 Dubai - United Arab Emirates
@@ -21,18 +21,16 @@ const Footer = (props: Props) => {
             </div>
           </div>
           <div className="space-y-4">
-            <h4 className="font-bodyTwo font-light text-neutral-300">
-              Email Us
-            </h4>
+            <h4 className="font-body font-light text-neutral-300">Email Us</h4>
             <h4 className="font-headerTwo font-bold text-xl">
-              support@brokerbase.live
+              support@equityplus.online
             </h4>
           </div>
         </div>
         {/* CopyRight */}
         <div className="my-4 p-4">
-          <p className="font-bodyTwo text-xs font-light">
-            © 2023 All Rights Reserved | Broker Base Group
+          <p className="font-body text-xs font-light">
+            © 2023 All Rights Reserved | Equity Plus
           </p>
         </div>
       </section>

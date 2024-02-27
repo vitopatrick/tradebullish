@@ -8,33 +8,33 @@ type Props = {};
 let faqs = [
   {
     id: 1,
-    question: "What is Broker Base?",
+    question: "What is equity plus?",
     answer:
-      "Broker Base is a one-stop-shop solution for forex brokers, offering services such as a CRM system, webtrader, PBX and VoIP system, RDP services, and quality leads.",
+      "equity plus is a one-stop-shop solution for Cryptocurrency brokers, offering services such as a CRM system, webtrader, PBX and VoIP system, RDP services, and quality leads.",
   },
   {
     id: 2,
-    question: "How can Broker Base help my forex brokerage?",
+    question: "How can equity plus help my Cryptocurrency brokerage?",
     answer:
-      "Broker Base can help your brokerage by providing all the necessary solutions in one place, streamlining your operations and making it easier to manage your clients and leads.",
+      "equity plus can help your brokerage by providing all the necessary solutions in one place, streamlining your operations and making it easier to manage your clients and leads.",
   },
   {
     id: 3,
-    question: "What kind of leads does Broker Base provide?",
+    question: "What kind of leads does equity plus provide?",
     answer:
-      "Broker Base provides quality leads that are verified and targeted to your specific requirements.",
+      "equity plus provides quality leads that are verified and targeted to your specific requirements.",
   },
   {
     id: 4,
-    question: "Can I customize the services I receive from Broker Base?",
+    question: "Can I customize the services I receive from equity plus?",
     answer:
-      "Yes, Broker Base offers customized solutions tailored to your specific needs and requirements.",
+      "Yes, equity plus offers customized solutions tailored to your specific needs and requirements.",
   },
   {
     id: 5,
-    question: "How secure are the RDP services provided by Broker Base?",
+    question: "How secure are the RDP services provided by equity plus?",
     answer:
-      "Broker Base offers flexible pricing options based on the specific services and solutions you require.",
+      "equity plus offers flexible pricing options based on the specific services and solutions you require.",
   },
 ];
 
@@ -76,7 +76,7 @@ const Faq = ({ question, answer, start }: any) => {
       <hr />
       {isVisible && (
         <div>
-          <p className="font-bodyTwo text-base font-light text-neutral-500 leading-relaxed py-4">
+          <p className="font-body text-base font-light text-neutral-500 leading-relaxed py-4">
             {answer}
           </p>
         </div>

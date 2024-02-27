@@ -26,7 +26,7 @@ export default function SideBarLinks() {
           className="text-2xl underline text-main font-header tracking-widest"
         >
           <img
-            src="https://irp.cdn-website.com/eacf0b23/dms3rep/multi/BrokerBase+Logo-01.svg"
+            src="https://irp.cdn-website.com/eacf0b23/dms3rep/multi/equity plus+Logo-01.svg"
             alt=""
           />
         </Link>

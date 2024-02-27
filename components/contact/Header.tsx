@@ -10,7 +10,7 @@ const Header = (props: Props) => {
         <h4 className="font-headerTwo md:w-[60%] text-2xl font-semibold">
           We would love to hear from you! If you have any questions about our
           services, would like to request a quote, or simply want to learn more
-          about Broker Base, please don't hesitate to get in touch
+          about equity plus, please don't hesitate to get in touch
         </h4>
         <div></div>
       </section>

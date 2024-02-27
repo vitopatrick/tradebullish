@@ -19,9 +19,10 @@ const Hero = (props: Props) => {
           <h4 className="md:text-5xl text-4xl text-white  font-headerTwo font-semibold md:w-[40%] w-full">
             The Ultimate <br /> One-Stop-Shop for Trading
           </h4>
-          <p className="font-bodyTwo md:w-[50%] leading-normal font-light text-white">
+          <p className="font-body md:w-[50%] leading-normal font-light text-white">
             Discover a world of convenience with our comprehensive suite of
-            services, tailored to meet the needs of Crypto/Forex brokers.
+            services, tailored to meet the needs of Crypto/Cryptocurrency
+            brokers.
           </p>
           <div className="flex gap-4">
             <Link

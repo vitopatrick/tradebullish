@@ -122,77 +122,77 @@ const RegisterForm = () => {
       <form className="space-y-8" onSubmit={handleSubmit(registerUser)}>
         {/* Name */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="name" className="font-bodyTwo">
+          <label htmlFor="name" className="font-body">
             Name
           </label>
           <input
             type="text"
             {...register("full_name")}
             placeholder="John Doe"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-sm capitalize text-red-400">
             {errors.full_name?.message}
           </p>
         </div>
         {/* email */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="font-bodyTwo">
+          <label htmlFor="email" className="font-body">
             Email
           </label>
           <input
             type="email"
             {...register("email")}
             placeholder="JohnDoe@example.com"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-sm capitalize text-red-400">
             {errors.email?.message}
           </p>
         </div>
         {/* password */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="password" className="font-bodyTwo">
+          <label htmlFor="password" className="font-body">
             Password
           </label>
           <input
             type="password"
             {...register("password")}
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-sm capitalize text-red-400">
             {errors.password?.message}
           </p>
         </div>
         {/* phone Number */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="phone Number" className="font-bodyTwo">
+          <label htmlFor="phone Number" className="font-body">
             Phone Number
           </label>
           <input
             type="tel"
             {...register("phone_number")}
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-sm capitalize text-red-400">
             {errors.phone_number?.message}
           </p>
         </div>
         {/* country */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="country" className="font-bodyTwo">
+          <label htmlFor="country" className="font-body">
             Country
           </label>
           <select
             {...register("country")}
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           >
             {countries &&
               countries.map((country: any) => (
                 <option value={country.country}>{country.country}</option>
               ))}
           </select>
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-sm capitalize text-red-400">
             {errors.country?.message}
           </p>
         </div>
@@ -210,7 +210,7 @@ const RegisterForm = () => {
         </button>
         {/* Route the user to the login page */}
         <div>
-          <p className="font-bodyTwo text-neutral-400">
+          <p className="font-body text-neutral-400">
             Already Have an account{" "}
             <Link href="/login" className="text-neutral-600 underline">
               Login Account

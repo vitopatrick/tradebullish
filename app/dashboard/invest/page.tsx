@@ -10,7 +10,7 @@ export default function InvestmentPage() {
         </h4>
         <p className="text-neutral-500">
           choose a plan that matches your investment strategies and while gain
-          your beneficial interest, Nagamarkets is with you all the way
+          your beneficial interest, cryptocurrencys is with you all the way
         </p>
       </div>
       {/* end of header section */}

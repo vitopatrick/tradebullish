@@ -57,13 +57,13 @@ export default function ForgotPassword() {
             <h4 className="font-headerTwo text-3xl font-semibold">
               Forgot your password
             </h4>
-            <p className="text-neutral-400 font-bodyTwo underline">
+            <p className="text-neutral-400 font-body underline">
               Enter the email address associated with your account, and we will
               email you a link to reset your password
             </p>
           </div>
           <form className="my-4" onSubmit={handleSubmit(onSubmit)}>
-            <div className="flex flex-col font-bodyTwo my-4 gap-1">
+            <div className="flex flex-col font-body my-4 gap-1">
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -75,7 +75,7 @@ export default function ForgotPassword() {
                 }
                 {...register("email")}
               />
-              <p className="font-bodyTwo text-red-500 text-sm capitalize">
+              <p className="font-body text-red-500 text-sm capitalize">
                 {errors.email?.message}
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function ForgotPassword() {
               Send Reset link
             </button>
           </form>
-          <div className="flex items-center justify-center my-3 gap-1 font-bodyTwo text-neutral-400 text-center">
+          <div className="flex items-center justify-center my-3 gap-1 font-body text-neutral-400 text-center">
             <p>Remembered your password</p>{" "}
             <Link href="/login" className="text-black underline">
               Login

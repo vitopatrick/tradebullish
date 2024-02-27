@@ -7,11 +7,11 @@ const Header = (props: Props) => {
     <div>
       <section className="w-[80%] mx-auto p-4 space-y-3">
         <h4 className="text-2xl md:text-4xl font-headerTwo font-semibold">
-          One-Stop-Shop for Forex Brokers: Our Comprehensive Services
+          One-Stop-Shop for Cryptocurrency Brokers: Our Comprehensive Services
         </h4>
         <p className="font-headerTwo md:text-2xl font-semibold md:w-[60%]">
-          Discover how we can help you simplify and streamline your Forex
-          brokerage operations with our suite of services.
+          Discover how we can help you simplify and streamline your
+          Cryptocurrency brokerage operations with our suite of services.
         </p>
       </section>
     </div>

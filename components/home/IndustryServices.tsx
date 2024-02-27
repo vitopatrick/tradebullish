@@ -5,7 +5,7 @@ type Props = {};
 const industries = [
   "Embrace secure RDP services for a safer working environment.",
   "Capitalize on quality leads to drive business growth.",
-  "Discover new technologies transforming Forex trading.",
+  "Discover new technologies transforming Cryptocurrency trading.",
   "Explore the growing demand for mobile trading solutions and how to leverage this trend to better serve your clients.",
 ];
 
@@ -18,8 +18,8 @@ const IndustryServices = (props: Props) => {
           Stay Ahead of the Game with Industry Insights
         </h4>
         <p className="font-semibold font-headerTwo text-2xl">
-          Keep up to date with the latest trends and innovations in the Forex
-          industry.
+          Keep up to date with the latest trends and innovations in the
+          Cryptocurrency industry.
         </p>
         {/* grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2rem]">

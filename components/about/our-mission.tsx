@@ -11,15 +11,15 @@ const OurMission = (props: Props) => {
           <h4 className="text-2xl md:text-4xl font-headerTwo  font-semibold">
             Our Mission
           </h4>
-          <p className="md:w-[60%] font-headerTwo ">
-            Our mission at Broker Base is to provide the best possible service
-            and support to our clients. We strive to simplify Forex brokerage
-            operations, increase customer satisfaction, and ultimately drive
-            business success. We are committed to staying up-to-date with
+          <p className="md:w-[60%] font-body font-light ">
+            Our mission at equity plus is to provide the best possible service
+            and support to our clients. We strive to simplify Cryptocurrency
+            brokerage operations, increase customer satisfaction, and ultimately
+            drive business success. We are committed to staying up-to-date with
             industry trends and technologies to ensure our clients have the
             tools they need to succeed. With a focus on personalized service,
             quality solutions, and a dedicated support team, we are proud to be
-            a trusted partner for Forex brokers around the world.
+            a trusted partner for Cryptocurrency brokers around the world.
           </p>
         </div>
       </section>

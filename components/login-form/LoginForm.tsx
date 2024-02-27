@@ -99,7 +99,7 @@ const LoginForm = (props: Props) => {
       <form className="space-y-6" onSubmit={handleSubmit(loginUser)}>
         {/* email input */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-bodyTwo">
+          <label htmlFor="email" className="font-body">
             Email
           </label>
           <input
@@ -107,17 +107,17 @@ const LoginForm = (props: Props) => {
             {...register("email")}
             className={
               errors.email?.message
-                ? "border-b-2 border-red-500 p-3 font-bodyTwo"
-                : "border-b-2 border-black p-3 font-bodyTwo"
+                ? "border-b-2 border-red-500 p-3 font-body"
+                : "border-b-2 border-black p-3 font-body"
             }
           />
-          <p className="font-bodyTwo text-red-500 text-xs capitalize">
+          <p className="font-body text-red-500 text-xs capitalize">
             {errors.email?.message}
           </p>
         </div>
         {/* Password Input */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="password" className="font-bodyTwo">
+          <label htmlFor="password" className="font-body">
             Password
           </label>
           <input
@@ -125,17 +125,17 @@ const LoginForm = (props: Props) => {
             {...register("password")}
             className={
               errors.password?.message
-                ? "border-b-2 border-red-500 p-3 font-bodyTwo"
-                : "border-b-2 border-black p-3 font-bodyTwo"
+                ? "border-b-2 border-red-500 p-3 font-body"
+                : "border-b-2 border-black p-3 font-body"
             }
           />
-          <p className="font-bodyTwo text-red-500 text-xs capitalize">
+          <p className="font-body text-red-500 text-xs capitalize">
             {errors.password?.message}
           </p>
         </div>
         {/* forgot password */}
         <div>
-          <Link href="/forgot-password" className="font-bodyTwo">
+          <Link href="/forgot-password" className="font-body">
             Forgot Password?
           </Link>
         </div>
@@ -153,7 +153,7 @@ const LoginForm = (props: Props) => {
         </button>
         {/* create account link */}
         <div>
-          <p className="font-bodyTwo text-neutral-400">
+          <p className="font-body text-neutral-400">
             Don't have an account{" "}
             <Link href="/get-started" className="text-black underline">
               Create an account

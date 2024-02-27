@@ -16,44 +16,44 @@ const ReachOut = (props: Props) => {
       <form className="w-full space-y-8">
         {/* Name */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="name" className="font-bodyTwo">
+          <label htmlFor="name" className="font-body">
             Name
           </label>
           <input
             type="text"
             placeholder="John Doe"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
         </div>
         {/* email */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="font-bodyTwo">
+          <label htmlFor="email" className="font-body">
             Email
           </label>
           <input
             type="email"
             placeholder="JohnDoe@example.com"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
         </div>
         {/* password */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="password" className="font-bodyTwo">
+          <label htmlFor="password" className="font-body">
             Phone
           </label>
           <input
             type="tel"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
         </div>
         {/* phone Number */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="message" className="font-bodyTwo">
+          <label htmlFor="message" className="font-body">
             Message
           </label>
           <input
             type="text"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body"
           />
         </div>
 

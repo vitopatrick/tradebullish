@@ -9,9 +9,9 @@ export default function Nav() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="font-header text-main tracking-widest underline uppercase text-xl md:text-2xl font-bold"
+            className="font-headerTwo text-main tracking-widest underline uppercase text-xl md:text-2xl font-bold"
           >
-            Nagamarkets
+            Equity Plus
           </Link>
           <div className="font-body flex gap-3">
             <Link

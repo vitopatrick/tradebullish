@@ -7,7 +7,7 @@ let services = [
     id: 1,
     title: "CRM System: Streamline Your Client Management",
     description:
-      "Our intuitive and powerful CRM system is tailored to meet the needs of Forex brokers. With its user-friendly interface, you can easily manage client data, track leads, and monitor sales activity. Our CRM system also offers advanced reporting features, enabling you to gain insights into your business performance and make data-driven decisions.",
+      "Our intuitive and powerful CRM system is tailored to meet the needs of Cryptocurrency brokers. With its user-friendly interface, you can easily manage client data, track leads, and monitor sales activity. Our CRM system also offers advanced reporting features, enabling you to gain insights into your business performance and make data-driven decisions.",
   },
   {
     id: 2,
@@ -25,13 +25,13 @@ let services = [
     id: 4,
     title: "RDP Services: Protect Your Business with Secure Remote Desktops",
     description:
-      "Our RDP services provide secure remote desktops for Forex brokers, ensuring the safety and integrity of your operations. With our RDP services, you can easily access your trading platform and client data from any device, all while ensuring that your data is protected with the latest security protocols. Our RDP services are also highly scalable, enabling you to adapt to your business needs.",
+      "Our RDP services provide secure remote desktops for Cryptocurrency brokers, ensuring the safety and integrity of your operations. With our RDP services, you can easily access your trading platform and client data from any device, all while ensuring that your data is protected with the latest security protocols. Our RDP services are also highly scalable, enabling you to adapt to your business needs.",
   },
   {
     id: 5,
     title: "Leads: Grow Your Business with Quality Industry-Specific Leads",
     description:
-      "Our high-quality, industry-specific leads are tailored to Forex brokers, enabling you to grow your business with ease. Our leads are generated through proven methods and are highly targeted to ensure that you reach the right audience. With our leads, you can focus on what you do best, while we help you build your client base.",
+      "Our high-quality, industry-specific leads are tailored to Cryptocurrency brokers, enabling you to grow your business with ease. Our leads are generated through proven methods and are highly targeted to ensure that you reach the right audience. With our leads, you can focus on what you do best, while we help you build your client base.",
   },
 ];
 
@@ -50,7 +50,7 @@ const OurServices = (props: Props) => {
               <h4 className="font-headerTwo font-semibold text-2xl">
                 {service.title}
               </h4>
-              <p className="font-bodyTwo font-light leading-loose">
+              <p className="font-body font-light leading-loose">
                 {service.description}
               </p>
             </div>

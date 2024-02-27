@@ -5,7 +5,7 @@ export default function AuthHeader() {
     <header className="mb-[8%] p-3 flex items-center justify-between">
       <Link href="/">
         <div className="font-header text-main underline font-bold p-3 text-2xl tracking-widest">
-          NAGAMARKETS
+          cryptocurrencyS
         </div>
       </Link>
       <div>
