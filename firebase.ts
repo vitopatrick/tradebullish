@@ -5,14 +5,13 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBb7dul7HEAOXS837zn0J1m33QtSf8lWm8",
-  authDomain: "btc-project-18ff9.firebaseapp.com",
-  projectId: "btc-project-18ff9",
-  storageBucket: "btc-project-18ff9.appspot.com",
-  messagingSenderId: "1006061982685",
-  appId: "1:1006061982685:web:ef284a535e11926c211c34",
+  apiKey: "AIzaSyCL8l1Z7rjozU6InywEbbr9J6RclSMcXvo",
+  authDomain: "equity-plus-1601a.firebaseapp.com",
+  projectId: "equity-plus-1601a",
+  storageBucket: "equity-plus-1601a.appspot.com",
+  messagingSenderId: "959632300704",
+  appId: "1:959632300704:web:a43795d6866bdafae6c7c5",
 };
-
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
