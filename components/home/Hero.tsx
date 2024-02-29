@@ -32,7 +32,7 @@ const Hero = (props: Props) => {
               Login
             </Link>
             <Link
-              href="/sign-up"
+              href="/get-started"
               className="font-headerTwo  px-6 py-3  border border-white  rounded w-fit font-semibold text-white"
             >
               Sign Up
