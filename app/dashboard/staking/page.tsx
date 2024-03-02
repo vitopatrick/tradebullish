@@ -6,11 +6,11 @@ export default function InvestmentPage() {
       {/* header section */}
       <div className="flex items-center gap-2 flex-col justify-center p-3 font-body text-white my-6">
         <h4 className="text-xl md:text-3xl underline text-center">
-          Choose an investment plan
+          Select a Staking Plan
         </h4>
         <p className="text-neutral-500">
-          choose a plan that matches your investment strategies and while gain
-          your beneficial interest, cryptocurrencys is with you all the way
+          choose a plan that matches your Staking strategies and will gain your
+          beneficial interest.
         </p>
       </div>
       {/* end of header section */}

@@ -1,3 +1,5 @@
+"use client";
+
 import { useFetchUser } from "@/hooks/useFetchUser";
 
 const UserNameCard = () => {

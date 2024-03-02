@@ -4,7 +4,7 @@ import Link from "next/link";
 import TradingModal from "../modals/TradingModal";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useFetchUser } from "@/hooks/useFetchUser";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 type DashboardHeaderProps = {
   toggle: Dispatch<SetStateAction<boolean>>;
@@ -32,12 +32,6 @@ export default function DashboardHeader({ toggle }: DashboardHeaderProps) {
         </div>
       )}
       <div className="flex items-center gap-3">
-        <button
-          onClick={() => setIsOpen(true)}
-          className="bg-red-600 px-6 py-2 rounded-lg text-white font-body hover:bg-red-500"
-        >
-          Trade Live
-        </button>
         <div className="mx-3 p-2 md:hidden block">
           <FaBars
             className="text-white cursor-pointer"

@@ -17,8 +17,6 @@ const VerificationModal = ({ hide, setHide }: any) => {
 
   // submit verification form
   const submitVerification = async (e: any) => {
-    console.log("working");
-
     // prevent Browser Default
     e.preventDefault();
 
@@ -40,7 +38,7 @@ const VerificationModal = ({ hide, setHide }: any) => {
       });
       // hide modal
       setHide(false);
-      toast(e.code, {
+      toast("Upload Successful", {
         type: "success",
         position: "bottom-center",
         bodyClassName: "toast",

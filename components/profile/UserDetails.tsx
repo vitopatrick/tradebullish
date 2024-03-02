@@ -1,3 +1,5 @@
+"use client";
+
 import { TfiEmail } from "react-icons/tfi";
 import { MdOutlineVerified, MdPublishedWithChanges } from "react-icons/md";
 import { useFetchUser } from "@/hooks/useFetchUser";

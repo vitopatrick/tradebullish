@@ -8,7 +8,7 @@ export default function InvestmentCards() {
       {investmentplans.map((plan) => (
         <div
           key={plan.id}
-          className="bg-sideBar flex-1 basis-auto space-y-4 rounded-lg p-3 hover:shadow-main transition-all hover:shadow-sm ease-in-out hover:border hover:border-main hover:scale-105"
+          className="bg-sideBar flex-1 basis-auto space-y-4 rounded-lg p-3 "
         >
           <h4 className="text-neutral-400 md:text-2xl text-2xl font-header font-semibold">
             {plan.name}
@@ -17,10 +17,10 @@ export default function InvestmentCards() {
             {plan.minAmount}
           </h4>
           <p className="font-header text-neutral-400 underline">
-            With a return of:{plan.return}
+            ROI:{plan.return}
           </p>
           <p className="font-header text-neutral-400 underline">
-            last for only:{plan.duration}
+            Duration:{plan.duration}
           </p>
           <div className="py-5">
             <Link

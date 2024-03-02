@@ -131,6 +131,13 @@ const Form = () => {
         approved: false,
       });
 
+      toast("Payment Sent", {
+        type: "success",
+        position: "bottom-center",
+        bodyClassName: "toast",
+      });
+
+
       router.refresh();
     } catch (e: any) {
       toast(e.code, {
@@ -222,7 +229,7 @@ const Form = () => {
           {/* end of wallet details */}
         </form>
       </section>
-      <UploadProof />
+      {/* <UploadProof /> */}
       <BarCodeModal show={showBarCode} close={setBarCode} coin={defaultCoin} />
       <LoadingModal isOpen={isSubmitting} />
     </>

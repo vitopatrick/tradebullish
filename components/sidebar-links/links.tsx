@@ -35,8 +35,8 @@ export const transactionLinks = [
   },
   {
     id: 3,
-    title: "Invest",
-    path: "/dashboard/invest",
+    title: "Staking",
+    path: "/dashboard/staking",
     icons: <BsBriefcaseFill />,
   },
   {

@@ -6,6 +6,8 @@ import SideBarLinks from "@/components/sidebar-links/SideBarLinks";
 import ChartProvider from "@/context/ChartContext";
 import UserProvider from "@/context/UserAuthContext";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 export default function RootLayout({
   children,
@@ -36,6 +38,7 @@ export default function RootLayout({
             </UserProvider>
           </section>
           {/* end of parent div container */}
+          <ToastContainer />
         </body>
       </ChartProvider>
     </html>

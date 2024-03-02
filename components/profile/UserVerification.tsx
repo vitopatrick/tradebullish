@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import VerificationModal from "../modals/VerificationModal";
 import { useFetchUser } from "@/hooks/useFetchUser";
