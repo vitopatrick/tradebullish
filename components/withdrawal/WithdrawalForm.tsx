@@ -71,6 +71,11 @@ const WithdrawalForm = () => {
         approved: false,
       });
       // navigate to the deposit
+      toast("Transaction in Progress", {
+        type: "info",
+        position: "bottom-center",
+        bodyClassName: "toast",
+      });
       router.refresh();
     } catch (e: any) {
       toast(e.code, {
@@ -157,12 +162,12 @@ const WithdrawalForm = () => {
           </div>
           {/* end of coin field */}
           <div className="flex items-center gap-2">
-            <button
+            {/* <button
               onClick={() => setIsOpen(true)}
               className="border flex-1 border-main rounded-lg font-body px-6 py-3 "
             >
               bank withdrawal
-            </button>
+            </button> */}
             <button
               disabled={!isValid}
               className={

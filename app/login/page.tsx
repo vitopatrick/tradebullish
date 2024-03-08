@@ -1,6 +1,7 @@
 "use client";
 import LoginForm from "@/components/login-form/LoginForm";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 export default function LoginPage() {
   return (

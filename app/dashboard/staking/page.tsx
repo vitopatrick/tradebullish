@@ -1,4 +1,5 @@
 import InvestmentCards from "@/components/investments/InvestmentCards";
+import StakingOrder from "@/components/investments/StakingOrder";
 
 export default function InvestmentPage() {
   return (
@@ -17,6 +18,8 @@ export default function InvestmentPage() {
       {/* investment cards */}
       <InvestmentCards />
       {/* end of investment cards */}
+      {/* Staking Order */}
+      <StakingOrder />
     </section>
   );
 }
