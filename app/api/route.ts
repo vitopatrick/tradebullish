@@ -12,20 +12,20 @@ export async function POST(req: Request, res: Response) {
 
   // SMTP config
   let transporter = await nodemailer.createTransport({
-    host: "smtp.titan.email",
+    host: "smtp.hostinger.email",
     port: 465,
     secure: true,
     auth: {
-      user: "support@equityplus.online",
-      pass: "xabi&ancelotti",
+      user: "support@tradebullish.online",
+      pass: "Trent&Arnold@2019",
     },
   });
 
   // send mail
   await transporter.sendMail({
-    from: "support@equityplus.online",
+    from: "support@tradebullish.online",
     to: data.email,
-    subject: "welcome to Equity Plus",
+    subject: "welcome to Trade Bullish",
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html
   xmlns="http://www.w3.org/1999/xhtml"
@@ -360,7 +360,7 @@ export async function POST(req: Request, res: Response) {
                                   "
                                 >
                                   <p style="line-height: 200%">
-                                    Welcome to <strong>Equity Plus</strong>, your
+                                    Welcome to <strong>Trade Bullish</strong>, your
                                     gateway to the world of cryptocurrency
                                     trading! We are thrilled to have you on
                                     board, and we can't wait to assist you in
