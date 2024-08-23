@@ -4,7 +4,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="bg-black text-white h-[300px]">
+    <footer className="bg-blue-950 text-white h-[300px]">
       {/* container  */}
       <section className="w-[80%] mx-auto translate-y-8">
         <div className=" p-4 md:grid grid-cols-2">
@@ -23,14 +23,14 @@ const Footer = (props: Props) => {
           <div className="space-y-4">
             <h4 className="font-body font-light text-neutral-300">Email Us</h4>
             <h4 className="font-headerTwo font-bold text-xl">
-              support@equityplus.online
+              support@tradebullish.online
             </h4>
           </div>
         </div>
         {/* CopyRight */}
         <div className="my-4 p-4">
           <p className="font-body text-xs font-light">
-            © 2023 All Rights Reserved | Equity Plus
+            © 2023 All Rights Reserved | Trade bullish
           </p>
         </div>
       </section>

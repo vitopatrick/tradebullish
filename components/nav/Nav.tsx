@@ -11,7 +11,7 @@ export default function Nav() {
             href="/"
             className="font-headerTwo text-main tracking-widest underline uppercase text-xl md:text-2xl font-bold"
           >
-            Equity Plus
+            Trade bullish
           </Link>
           <div className="font-body flex gap-3">
             <Link

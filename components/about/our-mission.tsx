@@ -12,7 +12,7 @@ const OurMission = (props: Props) => {
             Our Mission
           </h4>
           <p className="md:w-[60%] font-body font-light ">
-            Our mission at equity plus is to provide the best possible service
+            Our mission at Trade bullish is to provide the best possible service
             and support to our clients. We strive to simplify Cryptocurrency
             brokerage operations, increase customer satisfaction, and ultimately
             drive business success. We are committed to staying up-to-date with

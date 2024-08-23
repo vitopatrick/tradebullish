@@ -5,21 +5,21 @@ import { AnimatePresence, motion } from "framer-motion";
 const faqs = [
   {
     id: 1,
-    question: "How long do I have to wait to withdraw from equity plus?",
+    question: "How long do I have to wait to withdraw from Trade bullish?",
     answer:
-      "equity plus withdrawals typically take around 30 minutes.That's because it usually takes that long for equity plus to process each transaction. However, if you withdraw large amounts, processing time may take longer.",
+      "Trade bullish withdrawals typically take around 30 minutes.That's because it usually takes that long for Trade bullish to process each transaction. However, if you withdraw large amounts, processing time may take longer.",
   },
   {
     id: 2,
-    question: "Does equity plus let you withdraw to bank?",
+    question: "Does Trade bullish let you withdraw to bank?",
     answer:
-      "How To Withdraw From equity plus To Bank? Unfortunately,you cannot withdraw fiat directly from equity plus. You will be able to withdraw your money,though,if you open an account on a different exchange that permits fiat withdrawals.",
+      "How To Withdraw From Trade bullish To Bank? Unfortunately,you cannot withdraw fiat directly from Trade bullish. You will be able to withdraw your money,though,if you open an account on a different exchange that permits fiat withdrawals.",
   },
   {
     id: 3,
-    question: "Can I withdraw from equity plus without verification?",
+    question: "Can I withdraw from Trade bullish without verification?",
     answer:
-      "equity plus is a cryptocurrency exchange that requires users to complete a verification process in order to use certain features of the platform, such as making deposits and withdrawals.",
+      "Trade bullish is a cryptocurrency exchange that requires users to complete a verification process in order to use certain features of the platform, such as making deposits and withdrawals.",
   },
 ];
 

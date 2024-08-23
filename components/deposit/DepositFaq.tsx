@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const faqs = [
   {
     id: 1,
-    question: "How many confirmations does equity plus need?",
+    question: "How many confirmations does Trade bullish need?",
     answer:
       "he deposit transaction will be automatic, and the Bitcoin transfer will need to be confirmed by the entire Bitcoin network, and your Bitcoin will be automatically deposited to your account after 6 confirmation",
   },
@@ -20,31 +20,31 @@ const faqs = [
     id: 3,
     question: "How long does it take to deposit",
     answer:
-      "Once there are enough confirmations on the blockchain, the equity plus system will start proceeding your deposit. This can take up to 2-3 hours.",
+      "Once there are enough confirmations on the blockchain, the Trade bullish system will start proceeding your deposit. This can take up to 2-3 hours.",
   },
   {
     id: 4,
     question: "Can i deposit without verification",
     answer:
-      "Although you can technically use equity plus even without verifying your identity, a withdrawal limit will be imposed on you until you undergo the verification process",
+      "Although you can technically use Trade bullish even without verifying your identity, a withdrawal limit will be imposed on you until you undergo the verification process",
   },
   {
     id: 5,
-    question: "Why is my equity plus deposit taking so long?",
+    question: "Why is my Trade bullish deposit taking so long?",
     answer:
       "Sometimes, there can be delays in the time needed for our system to record your deposit. If you still haven't received your deposit after the allotted time frame, please contact our online support and provide the following info",
   },
   {
     id: 6,
-    question: "How long does Usdt deposit take on equity plus?",
+    question: "How long does Usdt deposit take on Trade bullish?",
     answer:
       "Sometimes, there can be delays in the time needed for our system to record your deposit. If you still haven't received your deposit after the allotted time frame, please contact our online support and provide the following info",
   },
   {
     id: 7,
-    question: "How long does it take to receive BTC on equity plus?",
+    question: "How long does it take to receive BTC on Trade bullish?",
     answer:
-      "equity plus tries to process all withdrawal requests within 30 minutes. However, withdrawals can take up to 2-3 hours to process when many transactions are taking place on a certain blockchain network.",
+      "Trade bullish tries to process all withdrawal requests within 30 minutes. However, withdrawals can take up to 2-3 hours to process when many transactions are taking place on a certain blockchain network.",
   },
 ];
 

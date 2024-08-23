@@ -5,28 +5,21 @@ type Props = {};
 let services = [
   {
     id: 1,
-    title: "CRM System",
+    title: "Radically Lower Costs",
     description:
-      "Streamline your client management with our intuitive and powerful CRM system designed for Cryptocurrency brokers.",
+      "We're committed to reducing your Cryptocurrency trading expenses. Our commission rates are, on average, 36% lower* than our closest competitors. When we say we want to lower the price that people pay to trade Cryptocurrency, we mean it.",
     image:
       "https://lirp.cdn-website.com/eacf0b23/dms3rep/multi/opt/0_1+%281%29-1280w.png",
   },
   {
     id: 2,
-    title: "WebTrader",
+    title: "$0 Commission US Share Trading",
     description:
-      "Offer a seamless trading experience to your clients with our user-friendly and feature-rich WebTrader platform.",
+      "Most brokers charge $5-$10 per trade for US Share CFDs. True to our mission, we're charging $0 commission.",
     image:
       "https://lirp.cdn-website.com/eacf0b23/dms3rep/multi/opt/0_2-1920w.png",
   },
-  {
-    id: 3,
-    title: "PBX and VoIP System",
-    description:
-      "Enhance your communication infrastructure with our cost-effective and scalable PBX and VoIP solutions.",
-    image:
-      "https://lirp.cdn-website.com/eacf0b23/dms3rep/multi/opt/0_1+%282%29-1920w.png",
-  },
+
   {
     id: 4,
     title: "RDP Services",
@@ -57,7 +50,7 @@ const OurServices = (props: Props) => {
           Access everything you need for success, all in one place.
         </p>
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mt-[2rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-[2rem]">
           {services.map((service) => (
             <div key={service.id}>
               <div>
@@ -67,7 +60,9 @@ const OurServices = (props: Props) => {
                 <h4 className="font-headerTwo text-2xl my-2 font-semibold">
                   {service.title}
                 </h4>
-                <p className="text-sm font-body">{service.description}</p>
+                <p className="text-sm font-body font-light">
+                  {service.description}
+                </p>
               </div>
             </div>
           ))}

@@ -5,7 +5,7 @@ type Props = {};
 
 const ForBrokers = (props: Props) => {
   return (
-    <div className="bg-black  text-white py-[3rem]">
+    <div className="bg-blue-900  text-white py-[3rem]">
       {/* container */}
       <section className="w-[80%] mx-auto p-4 space-y-6 ">
         <h4 className="text-white text-4xl font-headerTwo font-semibold">

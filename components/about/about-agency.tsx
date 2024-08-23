@@ -24,7 +24,7 @@ const AboutAgency = (props: Props) => {
               Services
             </h4>
             <p className="font-body font-light text-[0.9rem]">
-              At equity plus, we are passionate about helping Cryptocurrency
+              At Trade bullish, we are passionate about helping Cryptocurrency
               brokers succeed. Our comprehensive suite of services is designed
               to simplify operations, improve customer satisfaction, and
               ultimately increase profitability for our clients. With years of

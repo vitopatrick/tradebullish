@@ -16,7 +16,7 @@ const Hero = (props: Props) => {
       <div className="absolute top-0 w-full py-[4rem]  h-full bg-gradient-to-br from-black to-black/30 right-0 left-0">
         {/* container */}
         <section className="w-[90%] mx-auto p-4 space-y-6">
-          <h4 className="md:text-5xl text-4xl text-white  font-headerTwo font-semibold md:w-[40%] w-full">
+          <h4 className="md:text-5xl text-4xl text-white  font-headerTwo font-semibold md:w-[60%] w-full">
             The Ultimate <br /> One-Stop-Shop for Trading
           </h4>
           <p className="font-body md:w-[50%] leading-normal font-light text-white">
@@ -33,7 +33,7 @@ const Hero = (props: Props) => {
             </Link>
             <Link
               href="/get-started"
-              className="font-headerTwo  px-6 py-3  border border-white  rounded w-fit font-semibold text-white"
+              className="font-headerTwo  px-6 py-3  bg-blue-900  rounded w-fit font-semibold text-white"
             >
               Sign Up
             </Link>

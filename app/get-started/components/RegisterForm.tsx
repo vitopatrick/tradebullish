@@ -129,7 +129,7 @@ const RegisterForm = () => {
             type="text"
             {...register("full_name")}
             placeholder="John Doe"
-            className="border-b-2 p-3 border-neutral-400 font-body"
+            className="p-3 border-[2px] border-blue-950/30 rounded-xl font-body"
           />
           <p className="font-body text-sm capitalize text-red-400">
             {errors.full_name?.message}
@@ -144,7 +144,7 @@ const RegisterForm = () => {
             type="email"
             {...register("email")}
             placeholder="JohnDoe@example.com"
-            className="border-b-2 p-3 border-neutral-400 font-body"
+            className="p-3 border-[2px] border-blue-950/30 rounded-xl font-body"
           />
           <p className="font-body text-sm capitalize text-red-400">
             {errors.email?.message}
@@ -158,7 +158,7 @@ const RegisterForm = () => {
           <input
             type="password"
             {...register("password")}
-            className="border-b-2 p-3 border-neutral-400 font-body"
+            className="p-3 border-[2px] border-blue-950/30 rounded-xl font-body"
           />
           <p className="font-body text-sm capitalize text-red-400">
             {errors.password?.message}
@@ -172,7 +172,7 @@ const RegisterForm = () => {
           <input
             type="tel"
             {...register("phone_number")}
-            className="border-b-2 p-3 border-neutral-400 font-body"
+            className="p-3 border-[2px] border-blue-950/30 rounded-xl font-body"
           />
           <p className="font-body text-sm capitalize text-red-400">
             {errors.phone_number?.message}
@@ -185,7 +185,7 @@ const RegisterForm = () => {
           </label>
           <select
             {...register("country")}
-            className="border-b-2 p-3 border-neutral-400 font-body"
+            className="p-3 border-[2px] border-blue-950/30 rounded-xl font-body"
           >
             {countries &&
               countries.map((country: any) => (

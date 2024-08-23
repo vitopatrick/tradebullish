@@ -107,8 +107,8 @@ const LoginForm = (props: Props) => {
             {...register("email")}
             className={
               errors.email?.message
-                ? "border-b-2 border-red-500 p-3 font-body"
-                : "border-b-2 border-black p-3 font-body"
+                ? "border-2 rounded-xl border-red-500 p-3 font-body"
+                : "border-2 rounded-xl border-black p-3 font-body"
             }
           />
           <p className="font-body text-red-500 text-xs capitalize">
@@ -125,8 +125,8 @@ const LoginForm = (props: Props) => {
             {...register("password")}
             className={
               errors.password?.message
-                ? "border-b-2 border-red-500 p-3 font-body"
-                : "border-b-2 border-black p-3 font-body"
+                ? "border-2 rounded-xl border-red-500 p-3 font-body"
+                : "border-2 rounded-xl border-black p-3 font-body"
             }
           />
           <p className="font-body text-red-500 text-xs capitalize">

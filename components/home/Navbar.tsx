@@ -30,10 +30,10 @@ const Navbar = (props: Props) => {
   return (
     <nav className="sticky top-0 bg-white z-50">
       {/* container */}
-      <div className="flex md:w-[80%] mx-auto py-4 px-2 justify-between items-center">
+      <div className="flex md:w-[90%] mx-auto py-4 px-2 justify-between items-center">
         <div className="w-[200px]">
           <Link href="/">
-            <h4 className="font-headerTwo font-bold text-2xl">Equity Plus</h4>
+            <img src="/logo.png" />
           </Link>
         </div>
 
@@ -51,7 +51,7 @@ const Navbar = (props: Props) => {
         <div>
           <Link
             href="/get-started"
-            className="font-headerTwo font-semibold bg-yellow-400 rounded-md px-6 py-3 w-full block"
+            className="font-headerTwo font-semibold bg-blue-900 text-white rounded-md px-6 py-3 w-full block"
           >
             Register Today
           </Link>
