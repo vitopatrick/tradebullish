@@ -14,7 +14,7 @@ const faqs = [
   {
     id: 2,
     question: "What is the minimum deposit",
-    answer: "The deposit amount must be between $5 – $5,000 per trade.",
+    answer: "The deposit amount must be between $500 – $5,000 per trade.",
   },
   {
     id: 3,
