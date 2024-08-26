@@ -12,7 +12,7 @@ export async function POST(req: Request, res: Response) {
 
   // SMTP config
   let transporter = await nodemailer.createTransport({
-    host: "smtp.hostinger.email",
+    host: "smtp.hostinger.com",
     port: 465,
     secure: true,
     auth: {

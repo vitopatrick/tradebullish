@@ -33,6 +33,7 @@ const WithdrawalForm = () => {
   // control the modal
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { user: state }: any = useContext(UserContext);
+  const [otpOpen, setOtpOpen] = useState(false);
 
   // Add Doc
   const router = useRouter();
@@ -61,7 +62,7 @@ const WithdrawalForm = () => {
       );
 
       // create another withdrawal collection
-      const withdrawalCollectionRef = collection(store, "/withdrawals");
+      // const withdrawalCollectionRef = collection(store, "/withdrawals");
       // create new Document
       await addDoc(withdrawalRef, {
         amount: fieldValue.amount,
@@ -162,12 +163,12 @@ const WithdrawalForm = () => {
           </div>
           {/* end of coin field */}
           <div className="flex items-center gap-2">
-            {/* <button
+            <button
               onClick={() => setIsOpen(true)}
-              className="border flex-1 border-main rounded-lg font-body px-6 py-3 "
+              className="flex-1 bg-blue-500 rounded-lg font-body px-6 py-3 "
             >
-              bank withdrawal
-            </button> */}
+              Bank withdrawal
+            </button>
             <button
               disabled={!isValid}
               className={
@@ -184,9 +185,25 @@ const WithdrawalForm = () => {
       </form>
       {/* end of form */}
       <BankWithdrawalModal isOpen={isOpen} toggle={setIsOpen} />
+      {/* <WithdrawalModal open={otpOpen} /> */}
       <DevTool control={control} />
     </section>
   );
 };
+
+// const WithdrawalModal = ({ open, close }: any) => {
+//   return (
+//     <div className="fixed top-0 z-40 bottom-0 right-0 left-0 bg-white/5 backdrop-blur-md">
+//       <div className="bg-stone-800 lg:w-[40%] mx-auto p-4">
+//         <p>
+//           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+//           Exercitationem nisi ipsa quo neque at quibusdam? Doloremque illo,
+//           ullam maiores similique iste aliquam ducimus sunt cupiditate quo saepe
+//           ab numquam delectus?
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default WithdrawalForm;

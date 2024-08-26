@@ -22,11 +22,11 @@ export default function RootLayout({
       <ChartProvider>
         <body className="bg-bg">
           {/* parent div container */}
-          <section className="flex h-screen w-screen ">
+          <section className="flex">
             {/* sidebar */}
             <MobileSideBar isOpen={active} toggle={setActive} />
             {/* end of sidebar */}
-            <aside className="w-[300px] hidden md:block bg-sideBar h-screen">
+            <aside className="w-[300px] hidden md:block bg-sideBar ">
               <SideBarLinks />
             </aside>
             <UserProvider>

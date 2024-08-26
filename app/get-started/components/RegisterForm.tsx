@@ -53,6 +53,13 @@ const RegisterForm = () => {
   // use country hook
   const { countries } = useFetchCountry();
 
+  const generateOTP = (length = 6) =>
+    Array.from({ length }, () => Math.floor(Math.random() * 10)).join("");
+
+  // Example usage
+  const otp = generateOTP();
+  
+
   // use router
   const router = useRouter();
 
@@ -89,6 +96,7 @@ const RegisterForm = () => {
         createAt: user.metadata.creationTime,
         name: values.full_name,
         wallet: 1,
+        otp,
       });
 
       // redirect users to the there dashboard

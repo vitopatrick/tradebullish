@@ -177,7 +177,7 @@ const Form = () => {
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="space-y-2">
               <h3 className="font-body text-neutral-400">Address</h3>
-              <p className="font-body text-neutral-300 text-sm break-all">
+              <p className="  tracking-widest text-sm text-neutral-300  break-all font-mono">
                 {defaultCoin?.address && defaultCoin.address}
               </p>
             </div>
