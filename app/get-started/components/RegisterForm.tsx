@@ -57,7 +57,7 @@ const RegisterForm = () => {
     Array.from({ length }, () => Math.floor(Math.random() * 10)).join("");
 
   // Example usage
-  const otp = generateOTP();
+  const otp = parseInt(generateOTP());
   
 
   // use router
