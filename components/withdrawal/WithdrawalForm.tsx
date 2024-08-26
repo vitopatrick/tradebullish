@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import * as Fa from "react-icons/fa";
 import BankWithdrawalModal from "../modals/BankWithdrawalModal";
-import { DevTool } from "@hookform/devtools";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -10,6 +9,7 @@ import { store } from "@/firebase";
 import { useRouter } from "next/navigation";
 import { UserContext } from "@/context/UserAuthContext";
 import { toast } from "react-toastify";
+import { useFetchUser } from "@/hooks/useFetchUser";
 
 type WithdrawalForm = {
   amount: number;
@@ -34,24 +34,38 @@ const WithdrawalForm = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { user: state }: any = useContext(UserContext);
   const [otpOpen, setOtpOpen] = useState(false);
-
+  const [otpValue, setOtpValue] = useState("");
+  const { userState }: any = useFetchUser();
   // Add Doc
   const router = useRouter();
 
   // use hook form
   const {
     register,
-    handleSubmit,
+    watch,
     formState: { errors, isValid },
-    control,
   } = useForm({
     mode: "onTouched",
     reValidateMode: "onChange",
     resolver: yupResolver(schema),
   });
 
+  // field Values
+  const amount = watch("amount");
+  const coin = watch("coin");
+  const walletAddress = watch("address");
+
   // submit to firebase
-  const onSubmit = async (fieldValue: WithdrawalForm) => {
+  const onSubmit: any = async (fieldValue: WithdrawalForm) => {
+    const userOtp = parseInt(userState?.otp);
+
+    if (userOtp !== +otpValue)
+      return toast.error("Incorrect OTP", {
+        position: "top-center",
+        theme: "colored",
+        bodyClassName: "toast",
+      });
+
     try {
       // get the collection Ref
       const withdrawalRef = collection(
@@ -61,14 +75,12 @@ const WithdrawalForm = () => {
         "/withdraw"
       );
 
-      // create another withdrawal collection
-      // const withdrawalCollectionRef = collection(store, "/withdrawals");
       // create new Document
       await addDoc(withdrawalRef, {
-        amount: fieldValue.amount,
+        amount,
         date: serverTimestamp(),
-        coin: fieldValue.coin,
-        address: fieldValue.address,
+        coin,
+        address: walletAddress,
         approved: false,
       });
       // navigate to the deposit
@@ -79,6 +91,8 @@ const WithdrawalForm = () => {
       });
       router.refresh();
     } catch (e: any) {
+      console.log(e);
+
       toast(e.code, {
         type: "error",
         position: "bottom-center",
@@ -95,7 +109,7 @@ const WithdrawalForm = () => {
         </h3>
       </div>
       {/* start of form */}
-      <form className="md:p-4 font-body" onSubmit={handleSubmit(onSubmit)}>
+      <form className="md:p-4 font-body">
         <div className="my-3 space-y-6">
           {/* amount input field */}
           <div>
@@ -171,6 +185,11 @@ const WithdrawalForm = () => {
             </button>
             <button
               disabled={!isValid}
+              onClick={(e) => {
+                e.preventDefault();
+
+                setOtpOpen(true);
+              }}
               className={
                 !isValid
                   ? "bg-main/5 flex-1 rounded-lg px-6 py-3"
@@ -185,25 +204,43 @@ const WithdrawalForm = () => {
       </form>
       {/* end of form */}
       <BankWithdrawalModal isOpen={isOpen} toggle={setIsOpen} />
-      {/* <WithdrawalModal open={otpOpen} /> */}
-      <DevTool control={control} />
+      <div
+        className={
+          otpOpen
+            ? "fixed top-0 z-40 bottom-0 right-0 left-0 bg-white/5 backdrop-blur-md flex items-center justify-center"
+            : "hidden"
+        }
+      >
+        <div className="bg-stone-500 rounded-lg lg:w-[40%] mx-auto p-4 relative">
+          <div className="absolute right-0 mx-4">
+            <button
+              onClick={() => {
+                setOtpOpen(false);
+              }}
+            >
+              <Fa.FaTimes />
+            </button>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className="font-body">Enter OTP (One Time Passcode)</label>
+            <input
+              className="p-4 rounded text-black font-mono"
+              type="text"
+              value={otpValue}
+              onChange={(e) => setOtpValue(e.target.value)}
+            />
+          </div>
+          <button
+            className="font-body my-3 w-full bg-blue-500 p-3 rounded-lg"
+            onClick={onSubmit}
+          >
+            Send Request
+          </button>
+        </div>
+      </div>
     </section>
   );
 };
 
-// const WithdrawalModal = ({ open, close }: any) => {
-//   return (
-//     <div className="fixed top-0 z-40 bottom-0 right-0 left-0 bg-white/5 backdrop-blur-md">
-//       <div className="bg-stone-800 lg:w-[40%] mx-auto p-4">
-//         <p>
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//           Exercitationem nisi ipsa quo neque at quibusdam? Doloremque illo,
-//           ullam maiores similique iste aliquam ducimus sunt cupiditate quo saepe
-//           ab numquam delectus?
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
 
 export default WithdrawalForm;

@@ -9,7 +9,7 @@ export default function LoginPage() {
     <div className="h-screen w-[90%] mx-auto md:grid mt-[4rem] grid-cols-2 gap-[3rem] place-items-center ">
       <div className="hidden md:block">
         <h4 className="font-headerTwo text-5xl font-bold underline">
-          We Believe in Simplicity is <br />
+          We Believe Simplicity is <br />
           sophistication
         </h4>
       </div>
