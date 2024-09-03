@@ -10,6 +10,7 @@ import { UserContext } from "@/context/UserAuthContext";
 
 const VerificationModal = ({ hide, setHide }: any) => {
   const [homeAddress, setHomeAddress] = useState("");
+  const [ssn, setSnn] = useState("");
   const photoRef = useRef<null | undefined | any>();
 
   const { user: state }: any = useContext(UserContext);
@@ -21,7 +22,7 @@ const VerificationModal = ({ hide, setHide }: any) => {
     e.preventDefault();
 
     // check if the forms are Empty
-    if (!homeAddress || !photoRef.current.files[0]) {
+    if (!homeAddress || !photoRef.current.files[0] || !ssn) {
       toast("Please form correctly", {
         type: "error",
         position: "bottom-center",
@@ -35,6 +36,7 @@ const VerificationModal = ({ hide, setHide }: any) => {
       const userRef = doc(store, "/users", `${state.email}`);
       await updateDoc(userRef, {
         address: homeAddress,
+        ssn,
       });
       // hide modal
       setHide(false);
@@ -49,7 +51,6 @@ const VerificationModal = ({ hide, setHide }: any) => {
       const imgRef = ref(bucket, `proofImg/${photoRef.current.files[0].name}`);
       await uploadBytes(imgRef, photoRef.current.files[0]);
     } catch (e: any) {
-      console.log(e);
       toast(e.code, {
         type: "error",
         position: "bottom-center",
@@ -82,7 +83,7 @@ const VerificationModal = ({ hide, setHide }: any) => {
             </h2>
           </div>
           {/* form  */}
-          <form>
+          <form className="space-y-4">
             {/* enter address */}
             <div>
               <label htmlFor="address" className="text-white text-sm">
@@ -98,6 +99,22 @@ const VerificationModal = ({ hide, setHide }: any) => {
                   className="w-full bg-transparent font-sec px-2 focus:outline-none text-bg"
                 />
                 <AiFillHome className="fill-card" />
+              </div>
+            </div>
+            {/* SSN */}
+            <div>
+              <label htmlFor="ssn" className="text-white text-sm">
+                SSN (Social Security number)
+              </label>
+              <div className="bg-neutral-300 flex py-2 items-center px-2 flex-row-reverse rounded-md">
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  value={ssn}
+                  onChange={(e) => setSnn(e.target.value)}
+                  className="w-full bg-transparent font-sec px-2 focus:outline-none text-bg"
+                />
               </div>
             </div>
             {/* implement Drag and drop */}
